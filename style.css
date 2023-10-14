@@ -62,24 +62,74 @@ h6 {
 }
 
 /* custom CSS */
+:root {
+  --text: hsl(208, 87%, 97%);
+  --background: hsl(222, 57%, 9%);
+  --primary: hsl(247, 45%, 47%);
+  --secondary: hsl(224, 44%, 12%);
+  --accent: hsl(208, 54%, 48%);
+}
+
+@import url("https://fonts.googleapis.com/css?family=Lato:700|Lato:400");
+
+html {
+  height: 100dvh;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  height: 100%;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
 
 .container {
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: minmax(200px, 1fr) 6fr;
+  grid-template-rows: 1fr 6fr;
 }
 
 .sidebar {
+  background: var(--background);
   grid-column: 1 / 2;
   grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
   padding: 1rem;
+}
+
+.sidebar__links {
+  font-size: 1.25rem;
+  font-weight: 600;
+
+  & ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    list-style: none;
+    padding-left: 0;
+  }
+
+  & a {
+    text-decoration: none;
+    color: var(--text);
+
+    &:hover {
+      color: var(--primary);
+    }
+  }
 }
 
 .header {
   grid-column: 2 / 3;
   display: flex;
   flex-direction: column;
-  padding: 1rem 2rem;
+  gap: 2rem;
+  padding: 2rem;
 }
 
 .header__row {
@@ -88,10 +138,38 @@ h6 {
   align-items: center;
 }
 
+.header__icons {
+  display: flex;
+  gap: 0.5rem;
+}
+
 .search {
-  background: red;
-  height: 24px;
-  width: 500px;
+  border: none;
+  color: var(--text);
+  background: var(--secondary);
+  height: 32px;
+  width: 50%;
+  padding: 1rem;
+  border-radius: 60px;
+
+  &:focus-within {
+    outline: 1px solid var(--primary);
+  }
+}
+
+.header__buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.button {
+  border: none;
+  cursor: pointer;
+  background: var(--primary);
+  color: var(--text);
+  font-weight: 600;
+  padding: 10px 48px;
+  border-radius: 60px;
 }
 
 .content {
@@ -99,23 +177,37 @@ h6 {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 1rem;
+  padding: 1rem;
 }
 
 .content__column {
   display: grid;
   gap: 1rem;
-  padding: 1rem;
 }
 
 .content__cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
 
   & .card {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
-    padding: 1rem;
+    justify-content: center;
+    padding: 2rem;
+  }
+}
+
+.card {
+  background: var(--secondary);
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+
+  & p:first-of-type {
+    font-size: 1.125rem;
+    font-weight: 600;
   }
 }
