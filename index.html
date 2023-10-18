@@ -9,13 +9,16 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/1b99563ec5.js"
+      crossorigin="anonymous"></script>
+    <script src="./index.js" defer></script>
     <title>Dashboard</title>
   </head>
   <body>
     <div class="container">
-      <div class="sidebar">
+      <div class="sidebar hidden">
         <div class="sidebar__links">
-          <div>Company</div>
           <ul>
             <li>
               <a href="#"><img src="./assets/icons/home.svg" alt="" />Home</a>
@@ -39,12 +42,7 @@
             </li>
             <li>
               <a href="#"
-                ><img src="./assets/icons/check-circle.svg" alt="" />Tasks</a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><img src="./assets/icons/people.svg" alt="" />Communities</a
+                ><img src="./assets/icons/lock.svg" alt="" />Privacy</a
               >
             </li>
             <li>
@@ -57,21 +55,21 @@
                 ><img src="./assets/icons/phone-call.svg" alt="" />Support</a
               >
             </li>
-            <li>
-              <a href="#"
-                ><img src="./assets/icons/lock.svg" alt="" />Privacy</a
-              >
-            </li>
           </ul>
         </div>
-        <button class="logout">
-          <img src="./assets/icons/log-out.svg" alt="" />Logout
-        </button>
       </div>
 
       <div class="header">
         <div class="header__container">
-          <h1>Dashboard</h1>
+          <div class="header__menu">
+            <h1>Dashboard</h1>
+            <button class="mobile-nav" id="nav-default">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <button class="mobile-nav hidden" id="nav-close">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
           <div class="header__user">
             <div>
               <p>Hi there,</p>

@@ -26,21 +26,6 @@ select {
   font: inherit;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-#root,
-#__next {
-  isolation: isolate;
-}
-
 /* custom CSS */
 :root {
   --text: hsl(208, 29%, 94%);
@@ -67,16 +52,23 @@ body {
 }
 
 .sidebar {
-  display: none;
+  background: var(--background);
+  position: fixed;
+  width: 100%;
+  height: 100%;
 }
 
 .sidebar__links {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 2rem;
+  height: 100%;
+  gap: 1rem;
+  padding: 1rem;
 
   & ul {
+    width: 80vw;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -136,6 +128,27 @@ a:hover {
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & button {
+    background: transparent;
+    font-size: 2rem;
+  }
+}
+
+#nav-close {
+  position: fixed;
+  top: 30px;
+  right: 35px;
+}
+
+.hidden {
+  display: none;
 }
 
 .header__user {
