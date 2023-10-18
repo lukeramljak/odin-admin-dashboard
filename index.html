@@ -4,53 +4,91 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet" />
     <title>Dashboard</title>
   </head>
   <body>
     <div class="container">
       <div class="sidebar">
-        <div class="sidebar__logo">
-          <div>Company</div>
-        </div>
         <div class="sidebar__links">
+          <div>Company</div>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Messages</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Tasks</a></li>
-            <li><a href="#">Communities</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Support</a></li>
-            <li><a href="#">Privacy</a></li>
+            <li>
+              <a href="#"><img src="./assets/icons/home.svg" alt="" />Home</a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./assets/icons/person.svg" alt="" />Profile</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="./assets/icons/message-circle.svg"
+                  alt="" />Messages</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./assets/icons/rotate-ccw.svg" alt="" />History</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./assets/icons/check-circle.svg" alt="" />Tasks</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./assets/icons/people.svg" alt="" />Communities</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./assets/icons/settings.svg" alt="" />Settings</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./assets/icons/phone-call.svg" alt="" />Support</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./assets/icons/lock.svg" alt="" />Privacy</a
+              >
+            </li>
           </ul>
         </div>
+        <button class="logout">
+          <img src="./assets/icons/log-out.svg" alt="" />Logout
+        </button>
       </div>
 
       <div class="header">
-        <div class="header__row">
+        <div class="header__left">
           <h1>Dashboard</h1>
-          <div class="header__icons">
+          <div>
+            <p>Hi there,</p>
+            <p>Morgan Oakley (@morgan)</p>
+          </div>
+        </div>
+        <div class="header__right">
+          <div class="searchbar">
             <input
-              class="search"
               type="search"
               name="search"
               id="search"
               placeholder="Search" />
-            <img src="" alt="" />
-            <img src="" alt="" />
-            <span>Morgan Oakley</span>
-          </div>
-        </div>
-        <div class="header__row">
-          <div class="header__user">
-            <img src="" alt="" />
-            <div>
-              <p>Hi there,</p>
-              <p>Morgan Oakley (@morgan)</p>
+            <div class="avatar">
+              <img src="./assets/people/morgan.jpeg" alt="" />
             </div>
           </div>
-          <div class="header__buttons">
+          <div class="buttons">
             <button class="button">New</button>
             <button class="button">Upload</button>
             <button class="button">Share</button>
@@ -68,6 +106,13 @@
                 delectus! Reprehenderit exercitationem ex libero sint
                 cupiditate.
               </p>
+              <div class="card__icons">
+                <img src="./assets/icons/check.svg" alt="" /><img
+                  src="./assets/icons/message-circle.svg"
+                  alt="" />
+                <img src="./assets/icons/maximize-2.svg" alt="" />
+                <img src="./assets/icons/trash.svg" alt="" />
+              </div>
             </article>
             <article class="card">
               <p>Super Cool Project</p>
@@ -76,6 +121,13 @@
                 delectus! Reprehenderit exercitationem ex libero sint
                 cupiditate.
               </p>
+              <div class="card__icons">
+                <img src="./assets/icons/check.svg" alt="" /><img
+                  src="./assets/icons/message-circle.svg"
+                  alt="" />
+                <img src="./assets/icons/maximize-2.svg" alt="" />
+                <img src="./assets/icons/trash.svg" alt="" />
+              </div>
             </article>
             <article class="card">
               <p>Super Cool Project</p>
@@ -84,6 +136,13 @@
                 delectus! Reprehenderit exercitationem ex libero sint
                 cupiditate.
               </p>
+              <div class="card__icons">
+                <img src="./assets/icons/check.svg" alt="" /><img
+                  src="./assets/icons/message-circle.svg"
+                  alt="" />
+                <img src="./assets/icons/maximize-2.svg" alt="" />
+                <img src="./assets/icons/trash.svg" alt="" />
+              </div>
             </article>
             <article class="card">
               <p>Super Cool Project</p>
@@ -92,6 +151,13 @@
                 delectus! Reprehenderit exercitationem ex libero sint
                 cupiditate.
               </p>
+              <div class="card__icons">
+                <img src="./assets/icons/check.svg" alt="" /><img
+                  src="./assets/icons/message-circle.svg"
+                  alt="" />
+                <img src="./assets/icons/maximize-2.svg" alt="" />
+                <img src="./assets/icons/trash.svg" alt="" />
+              </div>
             </article>
             <article class="card">
               <p>Super Cool Project</p>
@@ -100,6 +166,13 @@
                 delectus! Reprehenderit exercitationem ex libero sint
                 cupiditate.
               </p>
+              <div class="card__icons">
+                <img src="./assets/icons/check.svg" alt="" /><img
+                  src="./assets/icons/message-circle.svg"
+                  alt="" />
+                <img src="./assets/icons/maximize-2.svg" alt="" />
+                <img src="./assets/icons/trash.svg" alt="" />
+              </div>
             </article>
             <article class="card">
               <p>Super Cool Project</p>
@@ -108,6 +181,13 @@
                 delectus! Reprehenderit exercitationem ex libero sint
                 cupiditate.
               </p>
+              <div class="card__icons">
+                <img src="./assets/icons/check.svg" alt="" /><img
+                  src="./assets/icons/message-circle.svg"
+                  alt="" />
+                <img src="./assets/icons/maximize-2.svg" alt="" />
+                <img src="./assets/icons/trash.svg" alt="" />
+              </div>
             </article>
           </div>
         </div>
@@ -139,29 +219,37 @@
           </article>
           <article class="card">
             <p>Trending</p>
-            <div class="card__item">
-              <img src="" alt="" />
+            <div class="card__item trending">
+              <div class="avatar">
+                <img src="./assets/people/tegan.jpeg" alt="" />
+              </div>
               <div>
                 <p>@tegan</p>
                 <p>World Peace Builder</p>
               </div>
             </div>
-            <div class="card__item">
-              <img src="" alt="" />
+            <div class="card__item trending">
+              <div class="avatar">
+                <img src="./assets/people/morgan.jpeg" alt="" />
+              </div>
               <div>
                 <p>@morgan</p>
                 <p>Super Cool Project</p>
               </div>
             </div>
-            <div class="card__item">
-              <img src="" alt="" />
+            <div class="card__item trending">
+              <div class="avatar">
+                <img src="./assets/people/kendall.jpeg" alt="" />
+              </div>
               <div>
                 <p>@kendall</p>
                 <p>Life Changing App</p>
               </div>
             </div>
-            <div class="card__item">
-              <img src="" alt="" />
+            <div class="card__item trending">
+              <div class="avatar">
+                <img src="./assets/people/alex.jpeg" alt="" />
+              </div>
               <div>
                 <p>@alex</p>
                 <p>No Traffic Maker</p>
