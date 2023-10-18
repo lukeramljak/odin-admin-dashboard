@@ -54,15 +54,11 @@ body {
 .sidebar {
   background: var(--background);
   position: fixed;
-  width: 100%;
-  height: 100%;
-}
-
-.sidebar__links {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
   height: 100%;
   gap: 1rem;
   padding: 1rem;
@@ -75,40 +71,22 @@ body {
     list-style: none;
     padding-left: 0;
   }
-}
 
-a {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-}
+  & a {
+    color: var(--text);
+    background: var(--secondary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    gap: 0.875rem;
+    border-radius: 1.25rem;
+    padding: 1rem;
+  }
 
-button {
-  border: none;
-  cursor: pointer;
-}
-
-button,
-a {
-  color: var(--text);
-  background: var(--secondary);
-  font-weight: 700;
-  gap: 0.875rem;
-  border-radius: 1.25rem;
-  padding: 1rem;
-  align-self: stretch;
-}
-
-button:hover,
-a:hover {
-  background: var(--accent);
-}
-
-.avatar {
-  width: 60px;
-  height: 60px;
-  border-radius: 500px;
-  overflow: hidden;
+  & a:hover {
+    background: var(--accent);
+  }
 }
 
 .header {
@@ -125,26 +103,29 @@ a:hover {
   gap: 1rem;
 }
 
-h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-
 .header__menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
+  & h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
   & button {
     background: transparent;
+    border: none;
+    color: var(--text);
+    cursor: pointer;
     font-size: 2rem;
   }
-}
 
-#nav-close {
-  position: fixed;
-  top: 30px;
-  right: 35px;
+  #nav-close {
+    position: fixed;
+    top: 30px;
+    right: 35px;
+  }
 }
 
 .hidden {
@@ -180,6 +161,11 @@ h1 {
   font-weight: 600;
   padding: 1rem 2rem;
   border-radius: 60px;
+  align-self: stretch;
+}
+
+.button:hover {
+  background: var(--accent);
 }
 
 .content {
@@ -218,9 +204,15 @@ h1 {
   padding: 2rem;
   border-radius: 1.25rem;
 
-  & p:first-of-type {
+  & a {
+    text-decoration: none;
+    color: var(--primary);
     font-size: 1.125rem;
     font-weight: 600;
+  }
+
+  & a:hover {
+    color: var(--accent);
   }
 }
 
@@ -234,4 +226,11 @@ h1 {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 500px;
+  overflow: hidden;
 }
