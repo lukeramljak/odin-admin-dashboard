@@ -184,6 +184,10 @@ body {
   padding: 1rem;
 }
 
+.content__container:last-child {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
 .content__container {
   display: grid;
   gap: 1rem;
