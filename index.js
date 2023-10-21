@@ -3,13 +3,13 @@ const navButtonClose = document.getElementById("nav-close");
 const sidebar = document.querySelector(".sidebar");
 
 navButtonDefault.addEventListener("click", () => {
-  navButtonDefault.classList.add("hidden");
-  navButtonClose.classList.remove("hidden");
-  sidebar.classList.remove("hidden");
+  navButtonDefault.style.display = "none";
+  navButtonClose.style.display = "block";
+  sidebar.style.display = "flex";
 });
 
 navButtonClose.addEventListener("click", () => {
-  navButtonClose.classList.add("hidden");
-  navButtonDefault.classList.remove("hidden");
-  sidebar.classList.add("hidden");
+  navButtonClose.style.display = "none";
+  navButtonDefault.style.display = "block";
+  sidebar.style.display = "none";
 });
