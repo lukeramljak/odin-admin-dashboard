@@ -51,11 +51,6 @@ body {
   height: 100%;
 }
 
-i:hover {
-  cursor: pointer;
-  color: var(--accent);
-}
-
 .sidebar {
   display: none;
   background: var(--background);
@@ -137,6 +132,7 @@ i:hover {
 .header__user {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .search {
@@ -186,11 +182,14 @@ i:hover {
 
   & h2 {
     padding-left: 1rem;
+    margin-bottom: 0.5rem;
   }
 }
 
 .content__cards {
   display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
 
   & .card {
@@ -219,6 +218,11 @@ i:hover {
 
   & a:hover {
     color: var(--primary);
+  }
+
+  & i:hover {
+    cursor: pointer;
+    color: var(--accent);
   }
 }
 
@@ -274,7 +278,6 @@ i:hover {
   .header__user {
     flex-direction: row-reverse;
     justify-content: flex-end;
-    align-items: center;
     gap: 1rem;
   }
   .button-container {
@@ -283,5 +286,9 @@ i:hover {
   }
   .content {
     grid-column: 2 / 3;
+    grid-template-columns: 2fr 1fr;
+  }
+  .content__container {
+    grid-template-rows: max-content;
   }
 }
